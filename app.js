@@ -110,7 +110,6 @@ inputCheckElems.forEach((inp, index) => inp.addEventListener("change", (e) => {
       if (!inputCheckElems[a].checked) {
         next_trigger = setupAccordionTriggers[a]
         next_trigger.click();
-        console.log(a + " - " + inputCheckElems.length)
         break;
       }
     }

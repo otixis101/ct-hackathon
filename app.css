@@ -541,6 +541,7 @@ nav {
 
 .toast-info p {
   width: 90%;
+  font-size: 13px;
 }
 
 .toast-info {
@@ -549,6 +550,11 @@ nav {
 
 .toast-desktop_close{
   padding: 6px;
+}
+
+.toast-desktop_close:focus{
+  padding: 6px;
+  outline: 1px solid var(--state-focused);
 }
 .toast-mobile_close{
   padding: 6px;

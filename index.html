@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Set-up Guide for Shopify" />
     <title>Shopify Admin</title>
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,11 +22,13 @@
           class="desktop-logo"
           src="https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg"
           alt="shopify logo with icon and text"
+          aria-roledescription="shopify icon with text"
         />
         <img
           class="mobile-logo"
           src="https://crushingit.tech/hackathon-assets/shopify-icon.svg"
           alt="shopify icon logo"
+          aria-roledescription="shopify icon"
         />
       </a>
       <div class="search-input-container">
@@ -89,10 +92,10 @@
             <p>Alerts</p>
 
             <div>
-              <button>
+              <button role="button">
                 <svg
                   role="menuitem"
-                  aria-roledescription="filter alerts"
+                  aria-roledescription="Filter the alerts"
                   class="notification-dropdown_funnel_svg"
                   width="20"
                   height="20"
@@ -115,10 +118,10 @@
                 </svg>
               </button>
 
-              <button>
+              <button role="button">
                 <svg
                   role="menuitem"
-                  aria-roledescription="checked alerts"
+                  aria-roledescription="view checked alerts"
                   class="notification-dropdown_check-svg"
                   width="20"
                   height="20"
@@ -330,10 +333,12 @@
             role="button"
             href="https://www.shopify.com/pricing"
             target="_blank"
+            aria-label="Select a Plan"
             >Select a plan</a
           >
 
           <button
+            role="button"
             id="toastDesktopCloseElem"
             class="toast-desktop_close"
             aria-label="close toast button"
@@ -361,7 +366,10 @@
         <div class="setup-panel">
           <div id="setupGuideTogglerElem" class="setup-guide_toggler">
             <h1>Setup guide</h1>
-            <button id="setupGuideChevronElem">
+            <button
+              id="setupGuideChevronElem"
+              aria-roledescription="Click Button to expand and collapse setup guide"
+            >
               <svg
                 role="button"
                 aria-roledescription="click button to expand and collapse setup guide contentinfo"
@@ -390,7 +398,15 @@
             <label for="progressElem" id="progressCountElem"
               >0 / 5 completed</label
             >
-            <progress id="progressElem" value="0" max="100">0%</progress>
+            <progress
+              id="progressElem"
+              role="progressbar"
+              aria-labelledby="progressCountElem"
+              value="0"
+              max="100"
+            >
+              0%
+            </progress>
           </div>
         </div>
 
@@ -398,7 +414,7 @@
           <div>
             <div class="personalized-accordion active" data-accordion>
               <div class="personalized-accordion-content">
-                <div class="check-wrapper">
+                <button class="check-wrapper">
                   <label class="check-container">
                     <input
                       class="input-check"
@@ -424,10 +440,16 @@
                       </svg>
                     </div>
                   </label>
-                </div>
+                </button>
 
                 <div class="container">
-                  <p class="title" data-accordion-button>
+                  <p
+                    class="title"
+                    data-accordion-button
+                    role="button"
+                    tabindex="0"
+                    aria-controls="personalized-accordion-menu"
+                  >
                     Customize your online store
                   </p>
                   <div class="personalized-accordion-menu">
