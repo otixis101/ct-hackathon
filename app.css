@@ -597,6 +597,10 @@ nav {
   }
 }
 
+.setup-panel{
+  padding: 0.5rem;
+}
+
 .setup-guide_toggler {
   display: flex;
   justify-content: space-between;
@@ -810,7 +814,7 @@ progress[value]::-moz-progress-bar {
 
 
 .personalized-accordion {
-  padding: 0.75rem 1rem;
+  padding: 8px 8px 12px 8px;
   border-radius: 10px;
   display: flex;
   align-items: flex-start;
